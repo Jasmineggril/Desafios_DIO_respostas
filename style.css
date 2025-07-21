@@ -1,0 +1,303 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Reset básico para remover margens e preenchimentos padrão do navegador */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define a fonte padrão para o corpo do texto e cor de fundo */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fonte para o corpo do texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    color: #333; /* Cor padrão do texto */
+    background-color: #f8f9fa; /* Um cinza muito claro para o fundo */
+    display: flex; /* Para centralizar o conteúdo principal */
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+/* Estilos para links */
+a {
+    color: #0645ad; /* Cor azul padrão da Wikipedia para links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* --- Layout Principal --- */
+header, main, footer {
+    max-width: 1000px; /* Largura máxima para o conteúdo centralizado */
+    margin: 0 auto; /* Centraliza os blocos na página */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaecf0; /* Linha sutil na parte inferior */
+    display: flex;
+    justify-content: space-between; /* Alinha o branding e a navegação */
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+.site-branding h1 {
+    font-family: 'Merriweather', serif; /* Fonte para o título principal */
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-branding h1 a {
+    color: #333; /* Cor escura para o título do site */
+}
+
+.site-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+header nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex; /* Itens da navegação em linha */
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #0645ad;
+}
+
+/* --- Conteúdo Principal (Main) --- */
+main {
+    display: flex; /* Para o layout de duas colunas (conteúdo principal + sumário/aside) */
+    gap: 20px; /* Espaçamento entre as colunas */
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+}
+
+article {
+    flex: 3; /* O artigo ocupa mais espaço (3 partes) */
+    min-width: 0; /* Para evitar overflow com conteúdo longo */
+}
+
+/* Título do Artigo */
+#article-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5em;
+    color: #202122;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a2a9b1; /* Linha sob o título do artigo */
+    padding-bottom: 10px;
+}
+
+/* Títulos de Seção do Artigo */
+article h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    color: #202122;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Subtítulos de Seção */
+article h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.4em;
+    color: #202122;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 1em;
+    text-align: justify; /* Justifica o texto para um visual mais limpo */
+}
+
+/* Listas dentro do Artigo */
+article ul, article ol {
+    margin: 1em 0 1em 2em; /* Margem e indentação para listas */
+}
+
+article li {
+    margin-bottom: 0.5em;
+}
+
+/* Bloco de Citação */
+blockquote {
+    background-color: #f2f2f2;
+    border-left: 5px solid #a2a9b1;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Imagens e Figuras */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Linha Horizontal */
+hr {
+    border: none;
+    border-top: 1px solid #eaecf0;
+    margin: 40px 0;
+}
+
+
+/* --- Sumário (Aside) --- */
+.table-of-contents {
+    flex: 1; /* O sumário ocupa 1 parte do espaço */
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 15px;
+    border-radius: 5px;
+    align-self: flex-start; /* Fixa o sumário no topo da sua coluna */
+}
+
+.table-of-contents h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #202122;
+}
+
+.table-of-contents ol {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    margin: 0;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 8px;
+}
+
+.table-of-contents a {
+    color: #0645ad;
+    display: block; /* Faz o link ocupar toda a largura do item da lista */
+    padding: 3px 0;
+}
+
+.table-of-contents a:hover {
+    background-color: #eaf3ff; /* Fundo levemente azul ao passar o mouse */
+    text-decoration: none;
+}
+
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #f8f9fa;
+    color: #54595d;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eaecf0;
+    margin-top: 30px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer nav li {
+    margin: 0 10px;
+}
+
+footer nav a {
+    color: #54595d;
+}
+
+footer nav a:hover {
+    color: #0645ad;
+}
+
+/* Media Queries para Responsividade (para telas menores) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Coloca o conteúdo e o sumário um abaixo do outro */
+    }
+
+    .table-of-contents {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        margin-bottom: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Permite que os itens da navegação quebrem a linha */
+        justify-content: center;
+    }
+
+    header nav li {
+        margin: 5px 10px;
+    }
+
+    .site-branding h1 {
+        font-size: 2em;
+    }
+
+    #article-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header, main, footer {
+        padding: 15px;
+    }
+
+    .site-branding h1 {
+        font-size: 1.8em;
+    }
+
+    #article-title {
+        font-size: 1.8em;
+    }
+
+    article h3 {
+        font-size: 1.5em;
+    }
+}
