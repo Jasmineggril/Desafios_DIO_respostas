@@ -1,0 +1,300 @@
+/* Importa uma fonte para simular o estilo do Discord.
+   Você pode descomentar (remover //) esta linha se quiser usar a fonte Roboto. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* Estilos Gerais / Reset Básico para melhor controle de layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura do elemento */
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Prioriza Roboto, se não, usa outras fontes */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    color: #333; /* Cor de texto padrão */
+    background-color: white; /* Fundo base da página */
+}
+
+/* Garante que imagens sejam responsivas e não transbordem */
+img {
+    max-width: 100%; /* Imagens nunca serão maiores que seu contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra abaixo das imagens que ocorre com inline */
+}
+
+/* Contêiner central para limitar a largura do conteúdo principal */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Espaçamento lateral interno para conteúdo */
+}
+
+/* Estilos da Seção Hero (Topo da Página) */
+.hero-section {
+    background-image: url('./hero-bg.png'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
+    color: white; /* Cor do texto dentro da seção hero */
+    text-align: center;
+    padding: 100px 20px; /* Espaçamento interno superior/inferior */
+    min-height: 600px; /* Altura mínima para a seção, para garantir visibilidade */
+    display: flex; /* Habilita Flexbox para alinhar o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo Flexbox */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo Flexbox */
+    position: relative; /* Base para posicionamento absoluto de outros elementos se necessário */
+    overflow: hidden; /* Garante que o fundo não transborde, se houver efeitos */
+}
+
+.hero-content {
+    max-width: 700px; /* Largura máxima para o bloco de texto e botões */
+    z-index: 1; /* Garante que o conteúdo esteja acima de quaisquer fundos animados/decorativos */
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Tamanho da fonte do título principal */
+    margin-bottom: 20px;
+    font-weight: 900; /* Negrito extra para o título */
+    line-height: 1.1; /* Ajusta o espaçamento da linha do título */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9; /* Deixa o texto um pouco mais transparente */
+}
+
+.hero-buttons {
+    display: flex; /* Habilita Flexbox para os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 20px; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas pequenas */
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Bordas bem arredondadas, para o estilo de botão do Discord */
+    cursor: pointer; /* Indica que o elemento é clicável */
+    font-weight: bold;
+    text-decoration: none; /* Remove sublinhado padrão de links */
+    display: inline-flex; /* Permite alinhar ícone e texto no botão */
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transições suaves para hover */
+}
+
+.btn .icon-download {
+    width: 20px; /* Tamanho do ícone SVG */
+    height: 20px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.btn-primary {
+    background-color: white;
+    color: #5865f2; /* Cor azul do Discord */
+}
+
+.btn-primary:hover {
+    color: #434cbf; /* Azul mais escuro no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil no hover */
+    transform: translateY(-2px); /* Efeito de levantar no hover */
+}
+
+.btn-secondary {
+    background-color: #23272a; /* Cor escura do Discord */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #36393f; /* Um pouco mais claro no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil no hover */
+    transform: translateY(-2px); /* Efeito de levantar no hover */
+}
+
+/* Estilos das Seções de Recurso (Feature Sections) - Alternam imagem/texto */
+.feature-section {
+    padding: 80px 0; /* Espaçamento superior e inferior para cada seção */
+    display: flex; /* Habilita Flexbox para alinhar conteúdo */
+    align-items: center; /* Alinha itens verticalmente */
+}
+
+.light-bg {
+    background-color: #f6f6f6; /* Fundo cinza claro para algumas seções */
+}
+
+.dark-bg {
+    background-color: white; /* Fundo branco para outras seções */
+}
+
+.feature-section .container {
+    display: flex; /* Habilita Flexbox dentro do contêiner */
+    align-items: center; /* Alinha imagem e texto verticalmente */
+    gap: 50px; /* Espaço entre a imagem e o bloco de texto */
+}
+
+.feature-image, .feature-text {
+    flex: 1; /* Cada um ocupa uma proporção igual do espaço disponível */
+    min-width: 300px; /* Evita que os blocos fiquem muito pequenos antes de empilhar */
+}
+
+.feature-image img {
+    border-radius: 8px; /* Borda arredondada nas imagens das features */
+}
+
+.feature-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #23272a; /* Cor dos títulos das features */
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.feature-section p {
+    font-size: 1.1em;
+    color: #555; /* Cor dos parágrafos das features */
+}
+
+/* Para inverter a ordem da imagem e texto em seções específicas */
+.reverse-layout .container {
+    flex-direction: row-reverse; /* Inverte a ordem dos itens no Flexbox */
+}
+
+/* Estilos da Seção de Tecnologia Confiável */
+.tech-section {
+    padding: 80px 0;
+    text-align: center; /* Centraliza o texto e a imagem */
+    background-color: #f6f6f6; /* Fundo cinza claro */
+}
+
+.tech-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #23272a;
+    font-weight: 800;
+}
+
+.tech-section p {
+    max-width: 800px; /* Limita a largura do parágrafo para melhor leitura */
+    margin: 0 auto 40px auto; /* Centraliza o parágrafo e adiciona espaço abaixo */
+    font-size: 1.1em;
+    color: #555;
+}
+
+.tech-section img {
+    max-width: 80%; /* Ajusta o tamanho da imagem da interface */
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Estilos do Rodapé */
+.main-footer {
+    background-color: #23272a; /* Cor escura do rodapé */
+    padding: 40px 20px;
+    text-align: center; /* Centraliza o conteúdo (logo) */
+}
+
+.main-footer img {
+    height: 40px; /* Altura do logo do Discord */
+    filter: invert(100%); /* Transforma o logo preto em branco (se for um SVG preto) */
+    margin: 0 auto;
+}
+
+/* --- Responsividade com Media Queries --- */
+
+/* Para telas de tablets e menores (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+        min-height: 450px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em; /* Reduz o tamanho do título */
+    }
+
+    .hero-section p {
+        font-size: 1em; /* Reduz o tamanho do parágrafo */
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        align-items: center; /* Centraliza os botões */
+    }
+
+    .btn {
+        width: 80%; /* Botões ocupam mais largura */
+        max-width: 300px; /* Largura máxima para os botões empilhados */
+    }
+
+    .feature-section .container,
+    .reverse-layout .container {
+        flex-direction: column; /* Empilha imagem e texto verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .feature-image, .feature-text {
+        min-width: unset; /* Remove a largura mínima para flexbox */
+        width: 100%; /* Ocupam largura total disponível */
+    }
+
+    .feature-image {
+        margin-bottom: 30px; /* Espaço entre imagem e texto quando empilhados */
+    }
+
+    .feature-section h2 {
+        font-size: 1.8em;
+    }
+
+    .feature-section p {
+        font-size: 0.95em;
+    }
+
+    .tech-section h2 {
+        font-size: 2em;
+    }
+}
+
+/* Para telas de celulares (largura máxima de 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 15px;
+        min-height: 400px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .feature-section {
+        padding: 50px 0;
+    }
+
+    .feature-section h2 {
+        font-size: 1.5em;
+    }
+
+    .feature-section p {
+        font-size: 0.85em;
+    }
+
+    .tech-section h2 {
+        font-size: 1.8em;
+    }
+
+    .tech-section p {
+        font-size: 0.9em;
+    }
+}
