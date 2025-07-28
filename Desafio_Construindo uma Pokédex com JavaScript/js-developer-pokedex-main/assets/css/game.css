@@ -1,0 +1,79 @@
+.card {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   margin: 5px;
+   width: 120px; /* Largura base da carta */
+   height: 160px; /* Altura base da carta */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start; /* Alinhar o conteúdo ao topo inicialmente */
+   text-align: center;
+   font-size: 0.7em;
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+   background-color: #f9f9f9;
+   overflow: hidden; /* Importante para que a imagem não vaze */
+   cursor: pointer;
+}
+
+.card img {
+   max-width: 100%; /* Garante que a imagem não seja maior que a carta */
+   max-height: 60%; /* Limita a altura da imagem para deixar espaço para outros detalhes */
+   object-fit: contain; /* Redimensiona a imagem mantendo a proporção, sem cortar */
+   margin-top: 5px; /* Espaço acima da imagem */
+}
+
+.card .name {
+   font-weight: bold;
+   margin-top: 5px;
+   padding: 0 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+.card .hp {
+   font-size: 0.8em;
+   margin-top: 3px;
+}
+
+.card .attack-name {
+   margin-top: 5px;
+   font-style: italic;
+   font-size: 0.8em;
+}
+
+.card .attack-damage {
+   font-weight: bold;
+   font-size: 0.9em;
+}
+
+/* Estilos específicos para tipos de carta (você já pode ter isso) */
+.pokemon-card {
+   border-color: #a0e070; /* Verde claro para Pokémon */
+}
+
+.energy-card {
+   border-color: #ffcc00; /* Amarelo para Energia */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.energy-card img {
+   max-height: 80%; /* Energia pode ter imagem maior */
+   max-width: 80%;
+   object-fit: contain;
+   margin: 0;
+}
+.energy-card.fogo { background-color: #ffe0b2; }
+.energy-card.agua { background-color: #b2ebf2; }
+.energy-card.grama { background-color: #c8e6c9; }
+
+.trainer-card {
+   border-color: #c9c9c9; /* Cinza para Treinador */
+}
+.trainer-card img {
+   max-height: 50%;
+   object-fit: contain;
+   margin-top: 10px;
+}
