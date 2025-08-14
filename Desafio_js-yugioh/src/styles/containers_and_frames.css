@@ -1,0 +1,82 @@
+/**
+* customized divs (containers) and framed objects (background and frame image).
+*/
+.framed {
+    border-style: solid;
+    border-image-source: url("../assets/rpg/border-image.png");
+    border-image-repeat: repeat;
+    border-image-slice: 6;
+    border-image-width: 18px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: url("../assets/rpg/background-image.png") repeat repeat;
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-position: center;
+}
+/* Outros estilos de "framed" da sua biblioteca aqui se necessário ... */
+
+/* Estilos específicos do jogo */
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+}
+
+.container__left {
+    width: 35%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container__right {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-box__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card_details {
+    width: 80%;
+    text-align: center;
+}
+
+.player-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 120px;
+}
+
+.card-box {
+    height: 250px;
+    width: 170px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+/* Estilo para as cartas selecionáveis */
+.player-field .card-box {
+    height: 100px;
+    width: 70px;
+    background-image: url('../assets/icons/card-back.png');
+    background-size: cover;
+}
+
+.player-field .card-box:hover {
+    transform: scale(1.1);
+    border: 2px solid red;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-video .video {
+    height: 100vh;
+}
