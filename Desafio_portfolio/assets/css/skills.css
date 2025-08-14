@@ -1,0 +1,13 @@
+.skills { display: flex; flex-direction: column; gap: 2rem; }
+.skills h3 { margin-top: 0; border-bottom: 2px solid #8a2be2; padding-bottom: 0.5rem; }
+.skills .tools ul { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.skills .tools ul li img { height: 30px; }
+.skills .personal ul { list-style: none; padding: 0; margin: 0; }
+.skills .personal ul li { padding: 0.25rem 0; }
+@media only screen and (min-width: 768px) { .skills { display: grid; grid-template-columns: 1fr 1fr; } }
+@media only screen and (min-width: 768px) {
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

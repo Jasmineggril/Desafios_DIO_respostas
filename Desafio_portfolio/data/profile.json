@@ -1,0 +1,113 @@
+{
+  "name": "Jasmine de Sá Araujo",
+  "photo": "https://avatars.githubusercontent.com/u/12345678?v=4",
+  "job": "Estudante de Engenharia de Software",
+  "location": "Taguatinga, Distrito Federal, Brasil",
+  "phone": "(61) 99167-3636",
+  "email": "jasmine.araujo15@gmail.com",
+  "skills": {
+    "hardSkills": [
+      {
+        "name": "HTML",
+        "logo": "assets/img/skills/html.svg"
+      },
+      {
+        "name": "CSS",
+        "logo": "assets/img/skills/css.svg"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "assets/img/skills/js.svg"
+      },
+      {
+        "name": "React",
+        "logo": "assets/img/skills/react.svg"
+      },
+      {
+        "name": "Angular",
+        "logo": "assets/img/skills/angular.svg"
+      },
+      {
+        "name": "PHP",
+        "logo": "assets/img/skills/php.svg"
+      },
+      {
+        "name": "Laravel",
+        "logo": "assets/img/skills/laravel.svg"
+      },
+      {
+        "name": "MySQL",
+        "logo": "assets/img/skills/mysql.svg"
+      },
+      {
+        "name": "Docker",
+        "logo": "assets/img/skills/docker.svg"
+      },
+      {
+        "name": "Git",
+        "logo": "assets/img/skills/git.svg"
+      },
+      {
+        "name": "GitHub",
+        "logo": "assets/img/skills/github.svg"
+      }
+    ],
+    "softSkills": [
+      "Comunicação eficaz",
+      "Liderança",
+      "Trabalho em equipe",
+      "Resolução de problemas",
+      "Organização",
+      "Atendimento ao cliente"
+    ]
+  },
+  "languages": [
+    "Inglês (Avançado)",
+    "Espanhol (Intermediário)",
+    "Francês (Intermediário)"
+  ],
+  "portfolio": [
+    {
+      "name": "Curso de Suporte em TI - Coursera",
+      "url": "https://www.coursera.org/",
+      "github": true
+    },
+    {
+      "name": "Curso de Programador Web - SENAC",
+      "url": "https://www.senac.br/",
+      "github": true
+    },
+    {
+      "name": "Formação UX Design - Coursera (em andamento)",
+      "url": "https://www.coursera.org/",
+      "github": true
+    }
+  ],
+  "professionalExperience": [
+    {
+      "name": "Recepcionista / Bluefit Academia",
+      "period": "Set 2023 - Fev 2024",
+      "description": "Responsável pelo atendimento ao cliente, controle de entrada e organização da recepção[cite: 13, 14]. Realizava suporte à equipe de vendas e divulgação de promoções vigentes[cite: 15]."
+    },
+    {
+      "name": "Auditoria e Administração de Vendas / TIM Brasil",
+      "period": "Abr 2023 - Jun 2023",
+      "description": "Avaliação da qualidade de chamadas, análise de processos de vendas e verificação de conformidade com as normas regulatórias[cite: 17]."
+    },
+    {
+      "name": "Promotora de Vendas / C&A Modas S.A.",
+      "period": "Set 2022 - Abr 2023",
+      "description": "Atendimento ao cliente, organização da loja, promoção de produtos e alcance de metas de vendas[cite: 19]."
+    },
+    {
+      "name": "Entrevistadora de Campo / IBGE",
+      "period": "Jul 2022 - Fev 2023",
+      "description": "Coleta de dados estatísticos em campo, realizando análises geográficas e disseminando informações de caráter público[cite: 21]."
+    },
+    {
+      "name": "Telemarketing / Claro Brasil",
+      "period": "Dez 2021 - Jul 2022",
+      "description": "Atuação com vendas por telefone, fidelização de clientes, suporte e divulgação de campanhas promocionais[cite: 23]."
+    }
+  ]
+} 
